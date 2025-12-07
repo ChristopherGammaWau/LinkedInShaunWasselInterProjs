@@ -1,0 +1,17 @@
+Concepts:
+Vid 1 ---
+> imports
+> Instances + Using methods + primitives
+> Output: Console
+Vid 2 ---
+> Implementing methods (No explaining access modifiers)
+> String: Escape characters
+> Conditional: Switch-Case
+Vid 3 ---
+> Input:  using Scanner + console input stream
+> String: Concatinating
+Vid 4 ---
+> Loop: For 
+> Variable scope
+> Error handling: Try catch 
+> Conditional: Enchanced switch case
