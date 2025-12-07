@@ -7,11 +7,13 @@ import java.util.Scanner;
 public class DiceRollingApp {
 
 	public static void main(String[] args) {
-		
-		
+		boolean isRunning = true;
+		Scanner input = new Scanner(System.in);// Here so catch an access it
+		do {
+		// Challenge : Loops until user inputs "exit", not just when user inputs valid number
 		try {
 			// Get number of dice
-			Scanner input = new Scanner(System.in);// TODO Auto-generated method stub
+
 			
 			System.out.println("How many dice to roll?");
 			int numberOfDice = input.nextInt();
@@ -25,8 +27,17 @@ public class DiceRollingApp {
 			}
 		}
 		catch (InputMismatchException e) {
-			System.out.println("Please input valid numbers!");
+			// Challenge: Try to see if it's actually the "exit" string, else print error message.
+			String lineStr = input.nextLine();
+			if("Exit".equalsIgnoreCase(lineStr)) {
+				isRunning = false;
+			}
+			else {
+				System.out.println("Please enter valid integer or \"exit\"");
+			}
 		}
+		}
+		while(isRunning);
 
 	}
 	

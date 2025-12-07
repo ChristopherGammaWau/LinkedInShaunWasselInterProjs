@@ -1,3 +1,4 @@
 Course Challenge:
-
+1. Simple while loop, loop until input is correct
 Self impossed challenge:
+1. While loop, loop until user inputs "exit"
