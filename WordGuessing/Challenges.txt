@@ -1,4 +1,5 @@
 Course Challenge:
-1. Simple while loop, loop until input is correct
+1. User can play multiple times
+2. Store wins and losses
 Self impossed challenge:
-1. While loop, loop until user inputs "exit"
+1. Store wins and losses in a data structure inside a separate save file (serialization)

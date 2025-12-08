@@ -1,5 +1,7 @@
 Concepts:
 > Class: 
-	> Constructors (Vid 1)
+	> Constructors + import (Vid 1)
 	> Instansiating (Vid 2)
 	> 
+> String:
+	> String to char array, vice versa
