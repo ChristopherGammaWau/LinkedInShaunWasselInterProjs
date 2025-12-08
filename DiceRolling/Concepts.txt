@@ -1,5 +1,0 @@
-Concepts:
-Vid 1 ---
-> Class: 
-	> Constructors
-	> 
