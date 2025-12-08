@@ -1,0 +1,5 @@
+Concepts:
+> Class: 
+	> Constructors (Vid 1)
+	> Instansiating (Vid 2)
+	> 
