@@ -1,1 +1,7 @@
 Course Challenge:
+1. Guarentee all character types can be included (not random)
+> Theory: Use rand to select character sets (not using 1 long string) and adjust chances based on the amount of each character sets ALREADY used.
+> Video solution: Check password if it fits the criteria, regenerate if not
+
+Self challenge:
+1. TODO: Guarentee the function ALWAYS generate a password that fits (not brute force)
