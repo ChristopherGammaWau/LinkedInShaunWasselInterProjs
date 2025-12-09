@@ -7,5 +7,3 @@ Theory:
 
 Solution:
 Yes but FileApp is the one implementing UIEventHandler (I thought FileApp must only contain main())
-
-TODO: Implement solution

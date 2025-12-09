@@ -51,7 +51,7 @@ public class FileManager {
 		
 		File directoryOrFile = new File(directoryOrFilePath);
 		try {
-			Files.delete(directoryOrFile.toPath()); // Can catch error messages
+			Files.delete(directoryOrFile.toPath()); // Self: Can catch error messages
 			System.out.println("Directory deleted!");
 //			directoryOrFile.delete();
 		} catch ( IOException e) {
