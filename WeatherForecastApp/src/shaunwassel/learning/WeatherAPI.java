@@ -3,9 +3,12 @@ package shaunwassel.learning;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 
 import io.github.cdimascio.dotenv.Dotenv;
 
@@ -23,7 +26,13 @@ public class WeatherAPI {
 	}
 	
 	public String getForecast(String city) {
-		String apiUrl = API_URL + "?q=" + city + "&appid=" + API_KEY + "&units=metric";
+		String apiUrl = "";
+		try {
+			apiUrl = API_URL + "?q=" + URLEncoder.encode(city, StandardCharsets.UTF_8.toString()) + "&appid=" + API_KEY + "&units=metric";
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		try {
 			URL url = new URL(apiUrl);
 			HttpURLConnection connection = (HttpURLConnection) url.openConnection();

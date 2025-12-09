@@ -20,9 +20,10 @@ public class WeatherResponseParser {
 				long timestamp = forecast.getLong("dt");
 				String date = new SimpleDateFormat("dd-MM-yyyy").format(new Date(timestamp * 1000));
 				double temperature = forecast.getJSONObject("main").getDouble("temp");
+				int humidity = forecast.getJSONObject("main").getInt("humidity");
 				String description = forecast.getJSONArray("weather").getJSONObject(0).getString("description");
 				
-				System.out.println(date + ": " + temperature + "C, " + description);
+				System.out.println(date + ": " + temperature + "C, Humidity: " + humidity + "%, " + description);
 			}
 		} 
 		else {

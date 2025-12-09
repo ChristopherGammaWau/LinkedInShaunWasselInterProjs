@@ -1,1 +1,2 @@
 Course Challenge:
+1. Display humidity too
