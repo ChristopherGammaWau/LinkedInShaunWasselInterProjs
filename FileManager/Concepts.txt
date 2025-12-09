@@ -1,0 +1,8 @@
+Concepts:
+> File I/O:
+	> Get ref
+	> Check existence
+	> Listing directory contents
+	> Create and delete dir/file
+> Design Patters:
+	> Event subscriber
