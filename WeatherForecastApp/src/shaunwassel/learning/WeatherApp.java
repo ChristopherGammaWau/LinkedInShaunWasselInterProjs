@@ -5,7 +5,9 @@ public class WeatherApp {
 	public static void main(String[] args) {
 		WeatherAPI api = new WeatherAPI();
 		String response = api.getForecast("Detroit");
-		System.out.println(response);
+		
+		WeatherResponseParser responseParser = new WeatherResponseParser();
+		responseParser.parseAndPrint(response);
 	}
 
 }

@@ -1,3 +1,6 @@
 Concepts:
 > API
 > Self: To load .env var, Maven and dotenv-java
+> Connection
+> Handling streams
+> JSON
