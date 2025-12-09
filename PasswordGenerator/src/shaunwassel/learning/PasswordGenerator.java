@@ -13,6 +13,9 @@ public class PasswordGenerator {
 		StringBuilder password = new StringBuilder();
 		
 		// For loop to select characters
+		for(int i = 0; i < length; i++) {
+			
+		}
 		
 	}
 
