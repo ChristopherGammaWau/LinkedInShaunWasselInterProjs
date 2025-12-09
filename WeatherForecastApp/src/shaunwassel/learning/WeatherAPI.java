@@ -1,19 +1,51 @@
 package shaunwassel.learning;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+
 import io.github.cdimascio.dotenv.Dotenv;
 
 public class WeatherAPI {
 	
 	private final String API_KEY;
+	private final String API_URL;
 	
 	public WeatherAPI() {
 		
 		Dotenv dotenv = Dotenv.load();
 		API_KEY = dotenv.get("API_KEY");
+		API_URL = dotenv.get("API_URL");
 		
 	}
 	
-	public static void main(String[] args) {
+	public String getForecast(String city) {
+		String apiUrl = API_URL + "?q=" + city + "&appid=" + API_KEY + "&units=metric";
+		try {
+			URL url = new URL(apiUrl);
+			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+			connection.setRequestMethod("GET");
+			
+			BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+			StringBuilder response = new StringBuilder();
+			String line;
+			
+			while((line = reader.readLine()) != null) {
+				response.append(line);
+			}
+			reader.close();
+			return response.toString();
+			
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return "";
 	}
-
 }
