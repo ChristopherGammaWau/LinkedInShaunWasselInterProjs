@@ -46,10 +46,10 @@ public class PasswordGenerator {
 			}
 			
 			// TODO: Improve nested if statements
-			if(this.hasOverlap(this.lowercaseChars, password.toString())) {
-				if(this.hasOverlap(this.uppercaseChars, password.toString())) {
-					if(this.hasOverlap(this.numberChars, password.toString())) {
-						if(this.hasOverlap(this.specialChars, password.toString())) {
+			if(!useLowerCase || this.hasOverlap(this.lowercaseChars, password.toString())) {
+				if(!useUpperCase || this.hasOverlap(this.uppercaseChars, password.toString())) {
+					if(!useNumbers ||this.hasOverlap(this.numberChars, password.toString())) {
+						if(!useSpecialChars ||this.hasOverlap(this.specialChars, password.toString())) {
 							doPasswordFitCriteria = true;
 						}
 					}
