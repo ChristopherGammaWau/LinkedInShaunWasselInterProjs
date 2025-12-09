@@ -1,2 +1,11 @@
 Course Challenge:
 1. Finish the app using FileManager.java and TextBasedInterface.java
+Theory: 
+1. Implement UIEventHandler interface into a class that calls FileManager methods
+2. Instanciate TextBasedInterface in FileApp, add the newly implemented UIEventHandler class as a handler
+3. Start TextBasedInterface
+
+Solution:
+Yes but FileApp is the one implementing UIEventHandler (I thought FileApp must only contain main())
+
+TODO: Implement solution
